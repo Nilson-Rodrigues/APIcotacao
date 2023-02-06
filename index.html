@@ -13,26 +13,35 @@
 <body>
 
     <section>
-    <h1>Cotação do dia</h1>
-    <div class="options">
-        <button id="btnUSD_BRL" value="USD-BRL" onclick="cotacao_USD_BRL()">USD-BRL</button>
-        <button id="btnEUR_BRL" value="EUR-BRL" onclick="cotacao_EUR_BRL()">EUR-BRL</button>
-        <button id="btnBTC_BRL" value="BTC-BRL" onclick="cotacao_BTC_BRL()">BTC-BRL</button>
-    </div>
-    <div class="container">
-        <h2 id="title"></h2>
-        <p id="date">
-            Data: <span id="thisdate"></span>
-        </p>
-        <p id="value">
-            Valor Atual Compra : <span id='compra'></span><br>
-            Valor Atual Venda : <span id='venda'></span><br>
-            Porcentagem de Variação: <span id="pctVariacao"></span><br>
-            Valor Máximo: <span id="maxvalue"></span><br>
-            Valor Mínimo: <span id="minvalue"></span>
-        </p>
-    </div>
+        <h1>Cotação do dia</h1>
+        <div class="options">
+            <div>
+                <button id="btnUSD_BRL" value="USD-BRL" onclick="cotacao_USD_BRL()">USD-BRL</button>
+            </div>
+            <div>
+                <button id="btnEUR_BRL" value="EUR-BRL" onclick="cotacao_EUR_BRL()">EUR-BRL</button>
+            </div>
+            <div>
+                <button id="btnBTC_BRL" value="BTC-BRL" onclick="cotacao_BTC_BRL()">BTC-BRL</button>
+            </div>
+        </div>
+        <div class="container">
+            <h2 id="title"></h2>
+            <p id="date">
+                Data: <span id="thisdate"></span>
+            </p>
+            <p id="value">
+                Valor Atual Compra : <span id='compra'></span><br>
+                Valor Atual Venda : <span id='venda'></span><br>
+                Porcentagem de Variação: <span id="pctVariacao"></span><br>
+                Valor Máximo: <span id="maxvalue"></span><br>
+                Valor Mínimo: <span id="minvalue"></span>
+            </p>
+        </div>
     </section>
+    <footer>
+        <p>Desenvolvido por <a href="">Nilson Rodrigues</a> © copyright</p>
+    </footer>
 
     <script src="./src/js/script_cotacao.js">
 
