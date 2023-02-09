@@ -38,8 +38,8 @@ body section {
     padding: 4rem;
     min-width: 300px;
     border-radius: 8px;
-    margin-bottom: 4rem;
-
+    margin-top: 134px;
+    margin-bottom: 10rem;
     box-shadow: 5px 5px 100px #000000;
 }
 .options {
@@ -102,21 +102,24 @@ body section {
 #minvalue {
     color: #ff0000;
 }
+
 footer {
-    position: fixed;
-    bottom: 0;
-    background-color: rgba(79, 33, 171, 0.5);
     width: 100%;
     text-align: center;
-}
-footer p {
+    background-color: #7831cf;
     padding: 3rem;
+    position: absolute;
+    bottom: 0;
 }
 
+footer a {
+    color: #888;
+}
 /*Mobile*/
-@media (max-width: 375px){
+@media (max-width: 480px){
 
     body section {
+        margin-top: 0;
         margin: 0px 10px ;
         padding: 0;
     }
@@ -144,5 +147,10 @@ footer p {
     }
     #value span {
         font-size: 1rem;
+    }
+}
+@media (max-width: 768px){
+    body section {
+        margin-top: 0;
     }
 }
