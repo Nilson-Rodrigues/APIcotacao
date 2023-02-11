@@ -5,18 +5,17 @@
 }
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 
     
     background-image: url(../img/backgroun_money.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #280C5F;
-    
     color: #fff;
     /*
     background-color: #000033;*/
-
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +38,7 @@ body section {
     padding: 4rem;
     min-width: 300px;
     border-radius: 8px;
-    margin-bottom: 10rem;
+    margin: 5rem 0 12rem;
     box-shadow: 5px 5px 100px #000000;
 }
 .options {
@@ -107,8 +106,9 @@ footer {
     width: 100%;
     text-align: center;
     background-color: rgb(120, 49, 207, 0.7);
-    padding: 3rem;
+    padding: 2rem;
     position: absolute;
+    left: 0;
     bottom: 0;
 }
 
