@@ -1,6 +1,7 @@
 const url = 'https://economia.awesomeapi.com.br/last/';
-const coins = 'USD-BRL,EUR-BRL,BTC-BRL';
-
+const coins = 'USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL';
+const selectElement = document.querySelector('#coins');
+let estadata;
 
 fetch(url + coins).then(function (response) {
     return response.json()
@@ -9,7 +10,7 @@ fetch(url + coins).then(function (response) {
     const btcReal = data.BTCBRL
 
     //variavel para formatar data para o pais local
-    let estadata = new Date(btcReal.create_date)
+    estadata = new Date(btcReal.create_date)
 
     document.getElementById('title').innerHTML = btcReal.name
     document.getElementById('thisdate').innerHTML = estadata.toLocaleString()
@@ -39,6 +40,51 @@ fetch(url + coins).then(function (response) {
 
 })
 
+
+selectElement.addEventListener('change', function(){
+    const selectdValue = this.value;
+    let coinSelectd = selectdValue.replace("-","")
+    const urls = `https://economia.awesomeapi.com.br/last/${selectdValue}`;
+
+    fetch(urls).then(function(response){
+        return response.json();
+    }).then(function(data){
+
+        const dados = data[coinSelectd];
+        
+        estadata = new Date(dados.create_date);
+
+        document.querySelector('#title').innerHTML = dados.name;
+        document.querySelector('#thisdate').innerHTML = estadata.toLocaleString();
+        document.querySelector('#maxvalue').innerHTML = parseFloat(dados.high).toLocaleString(
+            'pt-br', {
+                style: 'currency',
+                currency: 'BRL'
+            })
+        document.querySelector('#minvalue').innerHTML = parseFloat(dados.low).toLocaleString(
+            'pt-br', {
+            style: 'currency',
+            currency: 'BRL'
+        })
+        document.querySelector('#compra').innerHTML = parseFloat(dados.bid).toLocaleString(
+            'pt-br', {
+                style: 'currency',
+                currency: 'BRL'
+            }
+        )
+        document.querySelector('#venda').innerHTML = parseFloat(dados.ask).toLocaleString(
+            'pt-br', {
+                style: 'currency',
+                currency: 'BRL'
+            }
+        )
+        document.querySelector('#pctVariacao').innerHTML = parseFloat(dados.pctChange).toLocaleString()
+    
+    }).catch(e => {
+        console.log("Deu errado "+e);
+    })
+
+})
 
 function cotacao_EUR_BRL (){
  

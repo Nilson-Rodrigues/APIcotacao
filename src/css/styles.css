@@ -41,8 +41,28 @@ body section {
     margin: 5rem 0 12rem;
     box-shadow: 5px 5px 100px #000000;
 }
+.selectCoins {
+    margin-top: 2rem;
+}
+#coins {
+    border-color: rgb(40, 12, 95, 0.7);
+    background-color: #fff;
+    color: rgb(40, 12, 95, 0.7);
+    padding: 10px 20px;
+    
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    appearance: none;
+}
+#coins option {
+    border-radius: 8px;
+}
+#coins:focus{
+    outline: none;
+}
 .options {
-    margin: 2rem 0;
+    margin:2rem 0;
     padding: 0 40px;
     width: 100%;
     display: flex;
@@ -52,7 +72,7 @@ body section {
     background-color: rgb(40, 12, 95, 0.7);
     color: #fff;
     padding: 10px 15px;
-    border-radius: 15px;
+    border-radius: 1rem;
     border: none;
     cursor: pointer;
     transition: all 0.5s;
@@ -67,6 +87,7 @@ body section {
 }
 #title {
     margin: 20px 0;
+    padding: 5px 0;
     font-size: 2rem;
     border-bottom: solid 1px #888;
     text-align: center;
@@ -126,6 +147,9 @@ footer a {
         font-size: 2.5rem;
         margin: 20px 0;
     }
+    .selectCoins{
+        margin-top: 1rem;
+    }
     .options {
         padding: 0 20px;
     }
@@ -133,7 +157,7 @@ footer a {
         margin: 0 1rem 1rem;
     }
     #title{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     #date {
         font-size: 1rem;

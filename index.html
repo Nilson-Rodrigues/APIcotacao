@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/styles.css">
-
+    <link rel="shortcut icon" href="./src/img/favicon-coin.png" type="image/x-icon">
 
     <title>Contação do dia</title>
 </head>
@@ -16,14 +16,25 @@
     <main>
         <section>
             <h1>Cotação do dia</h1>
-            <!--
-            <div class="input_search">
-                <form action="" id="search">
-                    <input type="search" name="search" id="search">
-                    <input type="button" value="Buscar">
-                </form>
-            -->
+            <div class="selectCoins">
+                <select name="coins" id="coins">
+                    <option value="">Selecione uma moeda</option>
+                    <option value="USD-BRL">Dólar Americano</option>
+                    <option value="CAD-BRL">Dólar Canadense</option>
+                    <option value="EUR-BRL">Euro</option>
+                    <option value="GBP-BRL">Libra Esterlina</option>
+                    <option value="ARS-BRL">Peso Argentino</option>
+                    <option value="JPY-BRL">Iene Japonês</option>
+                    <option value="CHF-BRL">Franco Suíço</option>
+                    <option value="AUD-BRL">Dólar Australiano</option>
+                    <option value="CNY-BRL">Yuan Chinês</option>
+                    <option value="ILS-BRL">Novo Shekel Israelense</option>
+                    <option value="ETH-BRL">Ethereum</option>
+                    <option value="BTC-BRL">Bitcoin</option>
+                    <option value="LTC-BRL">Litecoin</option>
+                </select>
             </div>
+            
             <div class="options">
                 <div>
                     <button id="btnUSD_BRL" value="USD-BRL" onclick="cotacao_USD_BRL()">USD-BRL</button>
@@ -38,7 +49,7 @@
             <div class="container">
                 <h2 id="title"></h2>
                 <p id="date">
-                    Data: <span id="thisdate"></span>
+                    Atualizado: <span id="thisdate"></span>
                 </p>
                 <p id="value">
                     Valor Atual Compra : <span id='compra'></span><br>
